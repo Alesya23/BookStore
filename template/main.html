@@ -1,0 +1,65 @@
+<div class="container main" ng-controller="BookCtrl">
+
+    <div class="search">
+
+        <select class="form-control" name="categories" id="categories" ng-model="genres">
+
+
+            <option value="">Все жанры</option>
+            <option value="Приключения">Приключения</option>
+            <option value="Роман">Роман</option>
+            <option value="Ужасы">Ужасы</option>
+            <option value="Фэнтези">Фэнтези</option>
+            <option value="Детектив">Детектив</option>
+            <option value="Мистика">Мистика</option>
+            <option value="Триллер">Триллер</option>
+
+        </select>
+
+        <label>
+            <span class="glyphicon glyphicon-search"></span>
+            <input class="form-control" placeholder="Search" type="text" ng-model="query" />
+        </label>
+    </div>
+
+    <div class="sort-but">
+
+        <button class="btn btn-default" type="submit" ng-click="sort('title')">
+            by title
+            <i class="glyphicon" ng-class="{'glyphicon-chevron-up' : isSortUp('title'),
+            'glyphicon-chevron-down' : isSortDown('title')}"></i>
+        </button>
+
+        <button class="btn btn-default" type="submit" ng-click="sort('author')">
+            by author
+            <i class="glyphicon" ng-class="{'glyphicon-chevron-up' : isSortUp('author'),
+            'glyphicon-chevron-down' : isSortDown('author')}"></i>
+        </button>
+
+        <button class="btn btn-default" type="submit" ng-click="sort('year')">
+            by year
+            <i class="glyphicon" ng-class="{'glyphicon-chevron-up' : isSortUp('year'),
+            'glyphicon-chevron-down' : isSortDown('year')}"></i>
+        </button>
+
+    </div>
+
+    <div class="book col-md-6" ng-cloak="" ng-repeat="book in books | filter: genres | orderBy:sortField:reverse | filter: query" >
+
+        <img ng-src="{{book.url}}" alt="{{book.title}}" />
+
+        <p>{{book.title}}</p>
+        <p>{{book.genre}}, {{book.year}}</p>
+        <p>{{book.author}}</p>
+        <p><i><sup>*</sup>от {{book.age}} лет</i></p>
+
+        <button type="button" class="btn btn-success" ng-click="getScope().addToCart(book)">
+
+            <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+            {{book.price}},00
+
+        </button>
+
+    </div>
+
+</div>

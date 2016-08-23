@@ -1,0 +1,114 @@
+body {
+    padding: 40px;
+    font-family: "Comic Sans MS", SansSerif;
+}
+
+/*.search {*/
+    /*margin: 10px auto;*/
+/*}*/
+
+.search {
+
+    position: relative;
+    margin-left: 70px;
+    width: 200px;
+}
+.glyphicon-search {
+    position: absolute;
+    left: 0px;
+    top: 60px;
+}
+.search label {
+    margin: 20px;
+}
+
+.sort-but {
+    position: absolute;
+    top: 80px;
+    left: 70vw;
+
+}
+
+.book {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #DCDCDC;
+    border-radius: 5px;
+    box-shadow: 3px 3px 15px 2px #DCDCDC;
+    margin: 40px;
+    width: 400px;
+    height: 120px;
+
+}
+.book p {
+    margin-left: 100px;
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.book p:first-of-type {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 16px;
+}
+.book p:last-of-type {
+    font-size: 10px;
+}
+
+.book button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.book img {
+    position: absolute;
+    top: -15px;
+    height: 120px;
+    margin-bottom: 10px;
+    box-shadow: 3px 3px 15px 2px #DCDCDC;
+}
+
+.main {
+    padding: 40px;
+}
+
+.login-form {
+    width: 200px;
+    margin-left: 30px;
+}
+
+.glyphicon-user {
+    position: absolute;
+    top: 120px;
+    left: 45px;
+}
+
+.cart-book {
+    position: relative;
+    display: inline-block;
+    padding: 15px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 15px 2px #DCDCDC;
+}
+
+.cart-book img{
+    height: 120px;
+    margin-bottom: 10px;
+}
+.cart-book p:first-of-type {
+    font-weight: bold;
+    font-size: 18px;
+}
+.cart-book button {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}

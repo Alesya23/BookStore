@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Bookstore</title>
+
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/ngDialog.min.css">
+    <link rel="stylesheet" href="css/ngDialog-theme-default.min.css">
+    <link rel="stylesheet" href="css/task.css">
+
+</head>
+<body ng-controller="MainCtrl">
+
+<ng-view></ng-view>
+
+<header>
+
+
+
+    <nav class="navbar bg-info navbar-fixed-top">
+        <div class="container">
+
+
+            <div id="navbar" class="navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/">Home</a></li>
+                    <li class="active"><a href="#/about">About</a></li>
+
+                    <li><a href="#/cart" ng-if="getUser()">Cart</a></li>
+
+                    <li><a href="#/login" ng-if="!getUser()">Log in</a></li>
+                    <li><a href="#/login" ng-if="getUser()" ng-click="logOut()">Log out</a></li>
+                    <li><a href="#/user" ng-if="getUser()" class="ng-cloak"> {{getUser().name}}</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+</header>
+
+
+
+
+
+
+    <script src="lib/js/jquery.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+
+    <script src="lib/angular/angular.js"></script>
+
+
+    <script src="lib/angular/angular-route.js"></script>
+    <script src="lib/angular/ng-map.min.js"></script>
+<script src="lib/angular/ngDialog.min.js"></script>
+
+
+
+    <script src="lib/app.js"></script>
+
+
+    <script src="ctrl/main-controller.js"></script>
+    <script src="ctrl/book-controller.js"></script>
+    <script src="ctrl/about-controller.js"></script>
+    <script src="ctrl/login-controller.js"></script>
+    <script src="ctrl/cart-controller.js"></script>
+    <script src="ctrl/user-controller.js"></script>
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyBJzMHuVgtxGRf9xDuSz18fsiBwoPI5PNU"></script>
+
+
+    
+
+</body>
+</html>
